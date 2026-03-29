@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: roommate-finder-backend
+
+  # MySQL Database Configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/roommate_finder_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+
+  # Email Configuration (Gmail)
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: your-email@gmail.com
+    password: your-app-password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  # File Upload Configuration
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+# Server Configuration
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+# Application Properties
+app:
+  file:
+    upload-dir: ./uploads
+  email:
+    from: noreply@roommatefinder.com
+
+# Logging
+logging:
+  level:
+    root: INFO
+    com.roommatefinder: DEBUG
+    org.hibernate.SQL: DEBUG

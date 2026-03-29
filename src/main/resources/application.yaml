@@ -4,9 +4,9 @@ spring:
 
   # MySQL Database Configuration
   datasource:
-    url: jdbc:mysql://localhost:3306/roommate_finder_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/roommate_finder_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: root
-    password: password
+    password: Zxcvbnm@0987
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   # JPA Configuration
@@ -23,8 +23,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: your-email@gmail.com
-    password: your-app-password
+    username: rohitxrohilla@gmail.com
+    password: xbss wvzn urbo tkxh
     properties:
       mail:
         smtp:

@@ -47,10 +47,10 @@ public class ApartmentListing {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String address;
 
-    @Column(precision = 10, scale = 8)
+    @Column
     private Double latitude;
 
-    @Column(precision = 11, scale = 8)
+    @Column
     private Double longitude;
 
     @Column(nullable = false)
